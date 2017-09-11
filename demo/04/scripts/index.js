@@ -1,3 +1,4 @@
+
 var people = [{name: "Fred", age: 65}, {name: "Lucy", age: 36}];
 
 _.max(people, function(p) { return p.age });
@@ -213,6 +214,9 @@ function validator(message, fun) {
   f['message'] = message;
   return f;
 }
+
+var gonnaFail = checker(validator('ZONG!', always(false)))
+gonnaFail(100) //['ZONG']
 
 function aMap(obj) {
   return _.isObject(obj);

@@ -195,8 +195,8 @@ function checker(/* validators */) {
     }, []);
   };
 }
-
-var alwaysPasses = checker(always(true), always(true));
+debugger
+var alwaysPasses = checker(always(true), always(false));
 alwaysPasses({});
 //[]
 
